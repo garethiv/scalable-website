@@ -14,3 +14,14 @@ services:
       - FLASK_APP=blog/__init__.py
       - FLASK_ENV=development
       - APP_SETTINGS=blog.config.DevelopmentConfig
+
+  
+  blog-db:  # new
+    build:
+      context: ./blog/db
+      dockerfile: Dockerfile
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
