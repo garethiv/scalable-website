@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
 
-  api:
+  blog:
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,6 +11,6 @@ services:
     ports:
       - 5001:5000
     environment:
-      - FLASK_APP=api/__init__.py
+      - FLASK_APP=blog/__init__.py
       - FLASK_ENV=development
-      - APP_SETTINGS=api.config.DevelopmentConfig
+      - APP_SETTINGS=blog.config.DevelopmentConfig
