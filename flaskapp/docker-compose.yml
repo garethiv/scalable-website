@@ -16,7 +16,7 @@ services:
       - APP_SETTINGS=blog.config.DevelopmentConfig
 
   
-  blog-db:  # new
+  blog-db:
     build:
       context: ./blog/db
       dockerfile: Dockerfile
