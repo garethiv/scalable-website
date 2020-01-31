@@ -1,44 +1,28 @@
-import datetime
 import os
-from flask import Flask, jsonify
-from flask_restplus import Resource, Api
+from flask import Flask  # new
 from flask_sqlalchemy import SQLAlchemy
 
-# instantiate the app
-app = Flask(__name__)
-
-api = Api(app)
-
-# set config
-app_settings = os.getenv('APP_SETTINGS')  
-app.config.from_object(app_settings)
-
 # instantiate the db
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 
-class Post(db.Model):
-    __tablename__ = 'posts'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)    
-    title = db.Column(db.String(128), index=True, unique=True, nullable=False)
-    body = db.Column(db.String(140))
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    # categories = db.relationship('Category',
-    #     secondary=categories,
-    #     lazy='subquery',
-    #     backref=db.backref('posts', lazy=True))
-    slug = db.Column(db.String(64), unique=True)
+def create_app(script_info=None):
+    # instantiate the app
+    app = Flask(__name__)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    # set config
+    app_settings = os.getenv('APP_SETTINGS')
+    app.config.from_object(app_settings)
 
-    def __repr__(self):
-        return '<Post {}>'.format(self.title)
+    # set up extensions
+    db.init_app(app)
 
-class Ping(Resource):
-    def get(self):
-        return {
-            'status':'success',
-            'message': 'pong!'
-        }
+    # register blueprints
+    from blog.api.ping import ping_blueprint
+    app.register_blueprint(ping_blueprint)
 
-api.add_resource(Ping, '/ping')
+    # shell context for flask cli
+    @app.shell_context_processor
+    def ctx():
+        return {'app': app, 'db': db}
+
+    return app

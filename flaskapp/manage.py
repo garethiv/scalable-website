@@ -1,9 +1,10 @@
 from flask.cli import FlaskGroup
 
-from blog import app, db
+from blog import create_app, db
+from blog.api.models import Post
 
-
-cli = FlaskGroup(app)
+app = create_app()
+cli = FlaskGroup(create_app=create_app)
 
 @cli.command('recreate_db')
 def recreate_db():
