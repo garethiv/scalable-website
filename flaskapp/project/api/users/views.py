@@ -3,7 +3,7 @@ from flask import Blueprint, request
 from flask_restplus import Resource, Api, fields
 
 from project import db
-from project.api.models import User
+from project.api.users.models import User
 
 
 users_blueprint = Blueprint('users', __name__)

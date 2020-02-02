@@ -1,5 +1,5 @@
 import json
-from project.api.models import User
+from project.api.users.models import User
 
 def test_add_user(test_app, test_database):
     client = test_app.test_client()
