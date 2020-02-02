@@ -12,13 +12,16 @@ services:
     ports:
       - 5001:5000
     environment:
-      - FLASK_APP=blog/__init__.py
+      - FLASK_ENV=development
+      - APP_SETTINGS=project.config.DevelopmentConfig
+      - DATABASE_URL=postgresql://postgres:postgres@blog-db:5432/blog_dev
+      - DATABASE_TEST_URL=postgresql://postgres:postgres@blog-db:5432/blog_test
     depends_on:
       - blog-db
   
   blog-db:
     build:
-      context: ./blog/db
+      context: ./project/db
       dockerfile: Dockerfile
     expose:
       - 5432
