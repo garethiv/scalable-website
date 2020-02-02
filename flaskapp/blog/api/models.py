@@ -11,8 +11,6 @@ class Post(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     slug = db.Column(db.String(64), unique=True)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    def __repr__(self):
-        return '<Post {}>'.format(self.title)
+    def __init__(self, title, body):
+        self.title = title
+        self.body = body
