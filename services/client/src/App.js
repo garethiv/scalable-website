@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UsersList from './components/UsersList';
 import axios from 'axios';
 
 class App extends Component {
@@ -28,17 +29,7 @@ class App extends Component {
               <br/>
               <h1 className="title is-1">Users</h1>
               <hr/><br/>
-              {
-                this.state.users.map((user) => {
-                  return (
-                    <p
-                      key={user.id}
-                      className="box title is-4 username"
-                    >{ user.username }
-                    </p>
-                  )
-                })
-              }
+              <UsersList users={this.state.users}/>
             </div>
           </div>
         </div>
