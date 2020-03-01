@@ -1,2 +1,2 @@
-CREATE DATABASE blog_dev;
-CREATE DATABASE blog_test;
+CREATE DATABASE users_dev;
+CREATE DATABASE users_test;
