@@ -6,4 +6,19 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata : {
+    title: 'Blog',
+    description: 'Personal blog by Gareth Veale.',
+    siteUrl: 'https://garethveale.dev',
+  },
+  plugins: [
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`
+      }
+    }
+  ]
 }
