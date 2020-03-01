@@ -12,13 +12,13 @@ module.exports = {
     siteUrl: 'https://garethveale.dev',
   },
   plugins: [
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
-    }
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ]
 }
