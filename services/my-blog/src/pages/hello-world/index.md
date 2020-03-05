@@ -20,3 +20,59 @@ Oh, and here's a great quote from this Wikipedia on
 > firm-textured, round yolk that is bright orange-red in color.
 
 ![Chinese Salty Egg](./salty_egg.jpg)
+
+``` jsx
+let Rectangle = {
+  resizeTopLeft(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeTopRight(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeBottomLeft(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeBottomRight(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+};
+
+let Oval = {
+  resizeLeft(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeRight(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeTop(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeBottom(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+};
+
+let Header = {
+  resizeLeft(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeRight(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },  
+}
+
+let TextBlock = {
+  resizeTopLeft(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeTopRight(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeBottomLeft(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+  resizeBottomRight(position, size, preserveAspect, dx, dy) {
+    // 10 repetitive lines of math
+  },
+};
+```
