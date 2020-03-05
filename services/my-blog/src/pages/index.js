@@ -7,11 +7,11 @@ import SEO from "../components/seo"
 //import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = 'Gareth Veale'
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Home" />
       <Bio />
     </Layout>
   )

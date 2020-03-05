@@ -6,6 +6,7 @@ import { rhythm, scale } from "../utils/typography"
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
+  let footer
 
   if (location.pathname === rootPath) {
     header = (
@@ -48,6 +49,9 @@ const Layout = ({ location, title, children }) => {
         </Link>
       </h3>
     )
+    footer = (
+      <p>OTHER FOOTER</p>
+    )
   }
   return (
     <div
@@ -61,9 +65,7 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        {footer}
       </footer>
     </div>
   )
