@@ -15,6 +15,9 @@ const Layout = ({ location, title, children }) => {
           ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          alignItems: center,
+          justifyContent: center,
+
         }}
       >
         <Link
