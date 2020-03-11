@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `A blog by Gareth Veale`,
+    title: `Gareth Veale`,
     author: {
       name: `Gareth Veale.`,
-      summary: `All things tech, business and everything in between.`,
+      summary: `All things tech and business. Software engineer. Business neophyte. Full-time flaneur: Business, Macro, and Philosophy.`,
     },
-    description: `A blog written by Gareth Veale.`,
+    description: `Gareth Veale.`,
     //siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`, TODO
     social: {
       twitter: `garethveale`,
@@ -45,6 +45,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-emoji`,
         ],
       },
     },
@@ -76,6 +77,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
