@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Bio from "../components/bio"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -10,27 +11,35 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-          alignItems: 'center',
-          justifyContent: 'center',
-
-        }}
-      >
-        <Link
+      <div>
+        <h1
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
+            ...scale(1.5),
+            marginBottom: rhythm(1.5),
+            marginTop: '50%',
+            alignItems: 'center',
+            justifyContent: 'center',
+
           }}
-          to={`/`}
         >
-          {title}
-        </Link>
-      </h1>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/`}
+          >
+            {title}
+          </Link>
+        </h1>
+        <Bio />
+        <Link to={`/posts`}>Notes →</Link>
+        <br />
+        <Link to={`https://github.com/garethiv`}>github</Link> • 
+        <Link to={`https://www.linkedin.com/in/garethveale/`}>linkedin</Link> • 
+        <Link to={`https://twitter.com/garethveale`}>twitter</Link>
+      </div>
     )
   } else {
     header = (
