@@ -59,9 +59,9 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <p>
-          <Link to={`/`}>github</Link> • 
-          <Link to={`/`}>linkedin</Link> • 
-          <Link to={`/`}>twitter</Link>
+          <Link to={`https://github.com/garethiv`}>github</Link> • 
+          <Link to={`https://www.linkedin.com/in/garethveale/`}>linkedin</Link> • 
+          <Link to={`https://twitter.com/garethveale`}>twitter</Link>
         </p>
       </div>
     )
