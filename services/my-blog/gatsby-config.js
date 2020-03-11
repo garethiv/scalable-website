@@ -3,7 +3,7 @@ module.exports = {
     title: `Gareth Veale`,
     author: {
       name: `Gareth Veale.`,
-      summary: `All things tech and business. Software engineer. Business neophyte. Full-time flaneur: Business, Macro, and Philosophy.`,
+      summary: `Software engineer. Business neophyte. Full-time flaneur: Business, Macro, and Philosophy.`,
     },
     description: `Gareth Veale.`,
     //siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`, TODO
@@ -45,7 +45,17 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-emoji`,
+          {
+            resolve: 'gatsby-remark-emoji', // <-- this adds emoji
+            options: {
+              // default emojiConversion --> shortnameToUnicode
+              emojiConversion: 'shortnameToUnicode',
+              // when true, matches ASCII characters (in unicodeToImage and shortnameToImage)
+              // e.g. ;) --> 😉
+              ascii: false,
+            }
+          },
+          
         ],
       },
     },
