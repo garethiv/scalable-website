@@ -53,7 +53,17 @@ const Layout = ({ location, title, children }) => {
       </h3>
     )
     footer = (
-      <p>OTHER FOOTER</p>
+      <div
+        style ={{
+
+        }}
+      >
+        <p>
+          <Link to={`/`}>github</Link> • 
+          <Link to={`/`}>linkedin</Link> • 
+          <Link to={`/`}>twitter</Link>
+        </p>
+      </div>
     )
   }
   return (
