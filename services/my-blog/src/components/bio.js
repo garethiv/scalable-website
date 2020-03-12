@@ -73,7 +73,7 @@ const Bio = ({ location }) => {
         display: `flex`,
         marginBottom: rhythm(2.5),
       }}
-    >
+    ><Link to={`/`} style={{ boxShadow: `none` }}>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
@@ -87,6 +87,7 @@ const Bio = ({ location }) => {
           borderRadius: `50%`,
         }}
       />
+      </Link>
       <p>
         {author.summary}
         {` `}

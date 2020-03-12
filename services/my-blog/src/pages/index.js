@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ location }) => {
   const siteTitle = 'GARETH VEALE.'
 
   return (
