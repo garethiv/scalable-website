@@ -3,7 +3,7 @@ module.exports = {
     title: `Gareth Veale`,
     author: {
       name: `Gareth Veale.`,
-      summary: `Software engineer. Business neophyte. Full-time flaneur: Business, Macro, and Philosophy.`,
+      summary: `Software engineer. Business neophyte. Full-time flaneur: Business, Logic, and Philosophy.`,
     },
     description: `Gareth Veale.`,
     //siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`, TODO

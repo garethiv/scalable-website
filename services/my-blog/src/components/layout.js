@@ -33,9 +33,7 @@ const Layout = ({ location, title, children }) => {
             {title}
           </Link>
         </h1>
-        <Bio />
-        <Link to={`/posts`}>Notes →</Link>
-        <br />
+        <Bio location={location} />
         <Link to={`https://github.com/garethiv`}>github</Link> • 
         <Link to={`https://www.linkedin.com/in/garethveale/`}>linkedin</Link> • 
         <Link to={`https://twitter.com/garethveale`}>twitter</Link>
