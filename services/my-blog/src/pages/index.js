@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = 'Gareth Veale'
+  const siteTitle = 'GARETH VEALE.'
 
   return (
     <div

@@ -19,7 +19,6 @@ const Layout = ({ location, title, children }) => {
             marginTop: '50%',
             alignItems: 'center',
             justifyContent: 'center',
-
           }}
         >
           <Link
@@ -34,9 +33,9 @@ const Layout = ({ location, title, children }) => {
           </Link>
         </h1>
         <Bio location={location} />
-        <Link to={`https://github.com/garethiv`}>github</Link> • 
-        <Link to={`https://www.linkedin.com/in/garethveale/`}>linkedin</Link> • 
-        <Link to={`https://twitter.com/garethveale`}>twitter</Link>
+        <a href='https://github.com/garethiv' target="_blank">github</a> • 
+        <a href='https://www.linkedin.com/in/garethveale/' target="_blank"> linkedin</a> • 
+        <a href='https://twitter.com/garethveale' target="_blank"> twitter</a>
       </div>
     )
   } else {
