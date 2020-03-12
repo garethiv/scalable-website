@@ -4,7 +4,7 @@ import Bio from "../components/bio"
 
 import { rhythm, scale } from "../utils/typography"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, pageWidth }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
   let footer
@@ -77,7 +77,7 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: pageWidth ? rhythm(pageWidth) : rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
