@@ -27,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date} • ☕ {node.frontmatter.minread} min read</small>
+              <small>{node.frontmatter.date} •  <span role="img" aria-label="coffee">☕</span> {node.frontmatter.minread} min read</small>
             </header>
             <section>
               <p

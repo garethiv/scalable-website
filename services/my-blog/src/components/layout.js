@@ -34,9 +34,9 @@ const Layout = ({ location, title, children, pageWidth }) => {
           </Link>
         </h1>
         <Bio location={location} />
-        <a href='https://github.com/garethiv' target="_blank">github</a> • 
-        <a href='https://www.linkedin.com/in/garethveale/' target="_blank"> linkedin</a> • 
-        <a href='https://twitter.com/garethveale' target="_blank"> twitter</a>
+        <a href='https://github.com/garethiv' target="_blank" rel="noopener noreferrer">github</a> • 
+        <a href='https://www.linkedin.com/in/garethveale/' target="_blank" rel="noopener noreferrer"> linkedin</a> • 
+        <a href='https://twitter.com/garethveale' target="_blank" rel="noopener noreferrer"> twitter</a>
       </div>
     )
   } else {
