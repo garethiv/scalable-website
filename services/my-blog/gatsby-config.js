@@ -11,6 +11,7 @@ module.exports = {
       twitter: `garethveale`,
     },
   },
+  pathPrefix: "/reponame",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
